@@ -1,0 +1,8 @@
+canvas 50 25
+output output.txt
+figure rectangle 2 2 8 4 #
+figure circle 20 7 5 @
+figure triangle 30 2 8 6 $
+
+
+
