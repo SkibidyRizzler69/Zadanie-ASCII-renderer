@@ -5,7 +5,6 @@
 #include <sstream>
 #include <memory>
 
-// Abstract Canvas class
 class Canvas {
 protected:
     int width, height;
@@ -18,7 +17,6 @@ public:
     int getHeight() const { return height; }
 };
 
-// ASCII Canvas implementation
 class ASCIICanvas : public Canvas {
 private:
     std::vector<std::vector<char>> grid;
@@ -41,7 +39,6 @@ public:
     }
 };
 
-// Abstract Figure class
 class Figure {
 protected:
     int x, y;
@@ -52,7 +49,6 @@ public:
     virtual void draw(Canvas &canvas) const = 0;
 };
 
-// Rectangle class
 class Rectangle : public Figure {
 private:
     int width, height;
@@ -69,7 +65,6 @@ public:
     }
 };
 
-// Circle class
 class Circle : public Figure {
 private:
     int radius;
@@ -88,7 +83,6 @@ public:
     }
 };
 
-// Triangle class
 class Triangle : public Figure {
 private:
     int base, height;
@@ -106,7 +100,6 @@ public:
     }
 };
 
-// Function to parse configuration file
 void parseConfig(const std::string& configFile,
                  int &canvasWidth, int &canvasHeight,
                  std::string &outputFile,
